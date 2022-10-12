@@ -40,7 +40,7 @@ int[,] InitializateArray(int m, int n)
 {
     return new int[m,n];
 }
-int m = 5;
+int m = GetNumberFromConsole("Введите размерность квадратного массива");
 int[,] array = InitializateArray(m,m);
 FillSpiralArray(array);
 PrintArray(array);
