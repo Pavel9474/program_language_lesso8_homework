@@ -1,7 +1,11 @@
 ﻿// Написать рекурсивный метод, рассчитывающий
 //количество делителей числа
-int a=6;
-division(a);
+int GetNumberFromConsole(string text)
+{
+    Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
 void division (int n, int i = 1)
     {
         if (n % i == 0) 
@@ -9,3 +13,5 @@ void division (int n, int i = 1)
         if (i == n) return;
         division(n, ++i);
     }
+    int n = GetNumberFromConsole("Введите число");
+    division(n);
