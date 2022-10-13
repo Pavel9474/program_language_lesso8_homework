@@ -1,13 +1,10 @@
 ﻿// Написать рекурсивный метод, проверяющий равенство
 //сумм цифр одного числа и второго числа
-int a=125;
-int b=8;
-sum(a);
-sum(b);
-if (sum(a)==sum(b))
-Console.WriteLine("Суммы цифр равны");
-else
-Console.WriteLine("Суммы цифр не равны");
+int GetNumberFromConsole(string text)
+{
+    Console.WriteLine(text);
+    return Convert.ToInt32(Console.ReadLine());
+}
 int sum (int n)
 {
     if (n/10!=0)
@@ -15,3 +12,11 @@ int sum (int n)
     else
         return n%10;
 }
+int a = GetNumberFromConsole("Введите число b");
+int b = GetNumberFromConsole("Введите число a");
+sum(a);
+sum(b);
+if (sum(a)==sum(b))
+Console.WriteLine("Суммы цифр равны");
+else
+Console.WriteLine("Суммы цифр не равны");
